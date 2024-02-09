@@ -13,10 +13,8 @@ export NETCDF_DIR=$INSTALL_DIR/netcdf-parallel-new
 export HDF5_DIR=/usr/lib/x86_64-linux-gnu/hdf5/openmpi
 export PATH=$NETCDF_DIR/bin:$PATH
 export PATH=$INSTALL_DIR/cmake-dev/bin:$PATH
-
-git clone https://github.com/basileh/parflow.git $INSTALL_DIR/
-
 export PARFLOW_SRC=$INSTALL_DIR/parflow
+
 cd $PARFLOW_SRC
 rm -rf build; mkdir build
 cd build
