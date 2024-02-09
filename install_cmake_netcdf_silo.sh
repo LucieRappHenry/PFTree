@@ -4,7 +4,8 @@
 #
 #######################################
 
-export INSTALL_DIR=/home/rappl/pf_test2
+export INSTALL_DIR=/home/rappl/PFTree
+cd $INSTALL_DIR
 
 #  Install cmake
 wget  https://cmake.org/files/v3.18/cmake-3.18.0-rc3.tar.gz
@@ -36,7 +37,7 @@ make -j 8
 make install
 cd ..
 
-# Install Silo �|  partir du fichier tar
+# Install Silo a partir du fichier tar
 export SILO_DIR=$INSTALL_DIR/silo-4.10.2_install
 tar -xvf silo-4.10.2.tar
 cd  silo-4.10.2
@@ -45,3 +46,5 @@ make
 make install
 cd ..
 
+# Telechargement version de parflow Basile 
+git clone https://github.com/basileh/parflow.git
