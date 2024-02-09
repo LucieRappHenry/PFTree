@@ -47,4 +47,4 @@ make install
 cd ..
 
 # Telechargement version de parflow Basile 
-git clone https://github.com/basileh/parflow.git
+git clone https://github.com/basileh/parflow.git $INSTALL_DIR
