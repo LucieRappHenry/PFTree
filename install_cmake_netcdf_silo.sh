@@ -1,20 +1,23 @@
 ######################################
 #
-#  install cmake, netcdf, silo
+#  install cmake, netcdf, silo en local
 #
 #######################################
 
 export INSTALL_DIR=/home/rappl/PFTree
-cd $INSTALL_DIR
+mkdir $INSTALL_DIR/cmake_netcdf_silo
+export CMAKE_NETCDF_SILO_DIR=$INSTALL_DIR/cmake_netcdf_silo
+
+cd $CMAKE_NETCDF_SILO_DIR
 
 #  Install cmake
 wget  https://cmake.org/files/v3.18/cmake-3.18.0-rc3.tar.gz
 tar -xf cmake-3.18.0-rc3.tar.gz
 cd cmake-3.18.0-rc3
-./configure --prefix=$INSTALL_DIR/cmake-dev
+./configure --prefix=$CMAKE_NETCDF_SILO_DIR/cmake-dev
 make -j 8
 make install
-cd ..
+cd $CMAKE_NETCDF_SILO_DIR
 
 
 # Install Netcdf FARO
@@ -27,7 +30,7 @@ git checkout 2a34eb2a
 autoreconf -i
 make clean
 make distclean
-export NETCDF_DIR=$INSTALL_DIR/netcdf-parallel-new
+export NETCDF_DIR=$CMAKE_NETCDF_SILO_DIR/netcdf-parallel-new
 export HDF5_DIR=/usr/lib/x86_64-linux-gnu/hdf5/openmpi
 export PATH=$NETCDF_DIR/bin:$PATH
 ./configure --enable-netcdf-4 --prefix=$NETCDF_DIR \
@@ -35,7 +38,7 @@ export PATH=$NETCDF_DIR/bin:$PATH
               LDFLAGS="-L$HDF5_DIR/lib /usr/lib/x86_64-linux-gnu/libcurl.a "
 make -j 8
 make install
-cd ..
+cd $CMAKE_NETCDF_SILO_DIR
 
 # Install Silo a partir du fichier tar
 export SILO_DIR=$INSTALL_DIR/silo-4.10.2_install
@@ -44,7 +47,11 @@ cd  silo-4.10.2
 ./configure --disable-silex --prefix=$SILO_DIR
 make
 make install
-cd ..
+cd $INSTALL_DIR
 
-# Telechargement version de parflow Basile 
-git clone https://github.com/basileh/parflow.git $INSTALL_DIR
+# Telechargement version de parflow Basile HECTOR
+git clone https://github.com/basileh/parflow.git $INSTALL_DIR/parflow_src
+
+# Pour récupérer sorties albedo et changements couleurs (version Mahamadi TABSOBA)
+
+# Pour récupérer sorties albedo et changements couleurs (version Lucie RAPP-HENRY)
