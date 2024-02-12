@@ -5,9 +5,10 @@
 #######################################
 
 export INSTALL_DIR=/home/rappl/PFTree
+export CMAKE_NETCDF_SILO_DIR=$INSTALL_DIR/cmake_netcdf_silo
 
 # nom de la version parflow 
-export PARFLOW_DIR=$INSTALL_DIR/parflow-240125
+export PARFLOW_DIR=$INSTALL_DIR/parflow-240212
 
 export NETCDF_DIR=$INSTALL_DIR/netcdf-parallel-new
 export HDF5_DIR=/usr/lib/x86_64-linux-gnu/hdf5/openmpi
