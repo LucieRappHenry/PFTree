@@ -7,7 +7,7 @@
 export INSTALL_DIR=/home/rappl/PFTree
 mkdir $INSTALL_DIR/cmake_netcdf_silo
 export CMAKE_NETCDF_SILO_DIR=$INSTALL_DIR/cmake_netcdf_silo
-
+mv $INSTALL_DIR/silo-4.10.2.tar $CMAKE_NETCDF_SILO/silo-4.10.2.tar
 cd $CMAKE_NETCDF_SILO_DIR
 
 #  Install cmake
@@ -41,7 +41,7 @@ make install
 cd $CMAKE_NETCDF_SILO_DIR
 
 # Install Silo a partir du fichier tar
-export SILO_DIR=$INSTALL_DIR/silo-4.10.2_install
+export SILO_DIR=$CMAKE_NETCDF_SILO_DIR/silo-4.10.2_install
 tar -xvf silo-4.10.2.tar
 cd  silo-4.10.2
 ./configure --disable-silex --prefix=$SILO_DIR
