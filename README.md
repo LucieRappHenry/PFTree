@@ -1,3 +1,6 @@
+Warning : this script considers hdf5 is already installed, if not please, copy paste "sudo apt-get install libhdf5-openmpi-dev" in your console.
+
+
 Modify INSTALL_DIR path in install_cmake_netcdf_silo.sh
 Run install_cmake_netcdf_silo.sh
 
