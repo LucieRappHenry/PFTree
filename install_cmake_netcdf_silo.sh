@@ -15,7 +15,7 @@ wget  https://cmake.org/files/v3.18/cmake-3.18.0-rc3.tar.gz
 tar -xf cmake-3.18.0-rc3.tar.gz
 cd cmake-3.18.0-rc3
 # -- -DCMAKE_USE_OPENSSL=OFF is added to prevent any proble with OpenSSL, you can remove it if you don't need to prevent this issue
-./configure --prefix=$CMAKE_NETCDF_SILO_DIR/cmake-dev-- -DCMAKE_USE_OPENSSL=OFF
+./configure --prefix=$CMAKE_NETCDF_SILO_DIR/cmake-dev -- -DCMAKE_USE_OPENSSL=OFF
 
 make -j 8
 make install
