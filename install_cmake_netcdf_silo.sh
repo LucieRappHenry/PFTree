@@ -65,6 +65,18 @@ cp  /usr/include/hypre/*   $HYPRE_DIR/include/
 # Telechargement version de parflow Basile HECTOR
 git clone https://github.com/basileh/parflow.git $INSTALL_DIR/parflow_src
 
-# Pour récupérer sorties albedo et changements couleurs (version Mahamadi TABSOBA)
+# Pour récupérer sorties albedo et changements couleurs (version Mahamadi TABSOBA) 
+# Pas encore disponible
 
-# Pour récupérer sorties albedo et changements couleurs (version Lucie RAPP-HENRY)
+# Pour récupérer sorties albedo et changements couleurs et sorties neige (version Lucie RAPP-HENRY)
+# cd $PARFLOW_SRC
+# mv pfsimulator pfsimulator_IGE
+# git clone https://github.com/LucieRappHenry/pfsimulator_LRH.git $PARFLOW_SRC/pfsimulator/
+# cp pfsimulator pfsimulator_NEIGE $PARFLOW_SRC/pfsimulator $PARFLOW_SRC/pfsimulator_IGE
+
+# Pour récupérer sorties albedo et changements couleurs et sorties neige AVEC MODIF RACINES (version Lucie RAPP-HENRY RACINES)
+# suivre toutes les étapes de la section précédente (pour récupérer la version LRH)
+# cd $PARFLOW_SRC/pfsimulator
+# rm clm.F90
+# cp clm_FonctRacinesModif.F90 clm.F90
+
