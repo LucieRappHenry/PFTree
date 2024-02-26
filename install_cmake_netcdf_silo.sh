@@ -56,7 +56,7 @@ cd $INSTALL_DIR
 export HYPRE_DIR=$CMAKE_NETCDF_SILO_DIR/hypre-dev
 export HYPRE_ROOT=$HYPRE_DIR
 
-mkdir  -p  $HYPRE_DIR/lib
+mkdir -p  $HYPRE_DIR/lib
 mkdir -p  $HYPRE_DIR/include
 cp /usr/lib/x86_64-linux-gnu/libHYPRE*     $HYPRE_DIR/lib/
 cp  /usr/include/hypre/*   $HYPRE_DIR/include/
