@@ -1,4 +1,6 @@
-Warning : this script considers hdf5 and hypre are already installed, if not please, copy paste "sudo apt-get install libhdf5-openmpi-dev" for hdf5 and "sudo apt-get install hypre-dev" for hypre in your console.
+WARNING : this script considers hdf5 is already installed.
+To check if it is, you can 'whereis hdf5' in your console. If no path is returned, you don't have it.
+if not please, copy paste "sudo apt-get install libhdf5-openmpi-dev" in your console.
 
 clone this repository in your home :
 git clone https://github.com/LucieRappHenry/PFTree.git
