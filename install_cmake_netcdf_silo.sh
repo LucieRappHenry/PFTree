@@ -70,13 +70,13 @@ git clone https://github.com/basileh/parflow.git $INSTALL_DIR/parflow_src
 
 # Pour récupérer sorties albedo et changements couleurs et sorties neige (version Lucie RAPP-HENRY)
 # cd $PARFLOW_SRC
-# mv pfsimulator pfsimulator_IGE
+# mv pfsimulator/ pfsimulator_IGE/
 # git clone https://github.com/LucieRappHenry/pfsimulator_LRH.git $PARFLOW_SRC/pfsimulator/
-# cp pfsimulator pfsimulator_NEIGE $PARFLOW_SRC/pfsimulator $PARFLOW_SRC/pfsimulator_IGE
+# cp -rf pfsimulator pfsimulator_NEIGE 
 
 # Pour récupérer sorties albedo et changements couleurs et sorties neige AVEC MODIF RACINES (version Lucie RAPP-HENRY RACINES)
 # suivre toutes les étapes de la section précédente (pour récupérer la version LRH)
-# cd $PARFLOW_SRC/pfsimulator
+# cd $PARFLOW_SRC/pfsimulator/clm/
 # rm clm.F90
 # cp clm_FonctRacinesModif.F90 clm.F90
 
