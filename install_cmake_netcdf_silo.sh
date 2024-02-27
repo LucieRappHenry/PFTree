@@ -53,7 +53,7 @@ cd $CMAKE_NETCDF_SILO_DIR
 
 # Install Hypre
 git clone https://github.com/hypre-space/hypre
-cd hypre
+cd hypre/src
 export HYPRE_DIR=$CMAKE_NETCDF_SILO_DIR/hypre-dev
 export HYPRE_ROOT=$HYPRE_DIR
 ./configure --prefix=$HYPRE_DIR
