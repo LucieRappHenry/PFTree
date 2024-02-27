@@ -49,18 +49,17 @@ cd  silo-4.10.2
 ./configure --disable-silex --prefix=$SILO_DIR
 make
 make install
-cd $INSTALL_DIR
+cd $CMAKE_NETCDF_SILO_DIR
 
-
-#Configuration Hypre
+# Install Hypre
+git clone https://github.com/hypre-space/hypre
+cd hypre
 export HYPRE_DIR=$CMAKE_NETCDF_SILO_DIR/hypre-dev
 export HYPRE_ROOT=$HYPRE_DIR
-
-mkdir -p  $HYPRE_DIR/lib
-mkdir -p  $HYPRE_DIR/include
-cp /usr/lib/x86_64-linux-gnu/libHYPRE*     $HYPRE_DIR/lib/
-cp  /usr/include/hypre/*   $HYPRE_DIR/include/
-
+./configure --prefix=$HYPRE_DIR
+make -j 8
+make install
+cd $INSTALL_DIR
 
 # Telechargement version de parflow Basile HECTOR
 git clone https://github.com/basileh/parflow.git $INSTALL_DIR/parflow_src
