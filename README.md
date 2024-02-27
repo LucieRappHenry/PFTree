@@ -1,6 +1,6 @@
-WARNING : this script considers hdf5 is already installed.
-To check if it is, you can 'whereis hdf5' in your console. If no path is returned, you don't have it.
-if not please, copy paste "sudo apt-get install libhdf5-openmpi-dev" in your console.
+WARNING : this script considers hdf5 and g++ are already installed.
+To check if you have it, you can 'whereis hdf5' in your console for example. If no path is returned, you don't have it.
+if not please, copy paste "sudo apt-get install libhdf5-openmpi-dev" for hdf5 or "apt-get install g++" for g++ in your console.
 
 clone this repository in your home :
 git clone https://github.com/LucieRappHenry/PFTree.git
